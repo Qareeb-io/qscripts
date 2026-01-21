@@ -1,6 +1,7 @@
 #!/usr/bin/env bash
 set -e
 
+ORIGINAL_DIR="$(pwd)"
 
 cd "$HOME"
 
@@ -46,5 +47,9 @@ if [ -d "frontend" ]; then
         cd ..
     fi
 fi
+
+
+cd "$ORIGINAL_DIR"
+
 
 echo "✅ project setup completed successfully"
