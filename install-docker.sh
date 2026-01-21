@@ -8,6 +8,8 @@ echo "ensuring docker group exists"
 sudo groupadd docker || true
 sudo usermod -aG docker "$(id -un)"
 
+newgrp docker
+
 echo "enabling and starting docker services"
 sudo systemctl enable --now docker.service
 sudo systemctl enable --now containerd.service
