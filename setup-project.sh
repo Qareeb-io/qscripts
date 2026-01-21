@@ -1,6 +1,10 @@
 #!/usr/bin/env bash
 set -e
 
+
+cd "$HOME"
+
+
 read -rp "enter github ssh url: " REPO_URL
 
 if [ -z "$REPO_URL" ]; then
