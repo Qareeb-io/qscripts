@@ -45,6 +45,11 @@ if [ -d "frontend" ]; then
         cd frontend
         cp .env.example .env
         cd ..
+    else [-f "frontend/.example.env"]; then
+        echo "🎨 setting up frontend env"
+        cd frontend
+        cp .example.env .env
+        cd ..
     fi
 fi
 
